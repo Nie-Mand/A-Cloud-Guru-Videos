@@ -1,4 +1,5 @@
 export const extract_course_content_from_a_list = (list) => {
+  console.log(list)
   const final_list = []
 
   list.forEach((item) => {
@@ -28,6 +29,7 @@ const format_videosources = (videos) => {
 }
 
 export const extract_course_description = async (servers_data) => {
+  console.log(servers_data.data)
   const { artworkUrl, title, sections, description } =
     servers_data.data.userCourseOverview.courseOverview
 

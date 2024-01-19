@@ -35,6 +35,7 @@ export const getServerSideProps = async (ctx) => {
       options
     )
 
+    console.log("got", request)
     if (!request.data)
       return {
         props: {
@@ -50,6 +51,7 @@ export const getServerSideProps = async (ctx) => {
     }
   } catch (e) {
     console.log({ ...e })
+    console.log("response", e.response)
     return {
       props: {
         error:
